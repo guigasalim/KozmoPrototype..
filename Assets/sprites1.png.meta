@@ -1,0 +1,698 @@
+fileFormatVersion: 2
+guid: 4701a5180fa8ee549b560899c86110b4
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: InfinitySprite1
+    21300002: CyberEnemy
+    21300004: PlayerShip
+    21300006: InfinitySprite2
+    21300008: boom1
+    21300010: boom2
+    21300012: boom3
+    21300014: boom4
+    21300016: InfinitySprite3
+    21300018: boom5
+    21300020: boom6
+    21300022: boom7
+    21300024: boom8
+    21300026: boom10
+    21300028: boom11
+    21300030: boom12
+    21300032: InfinitySprite4
+    21300034: laser1
+    21300036: laser2
+    21300038: laser5
+    21300040: laser4
+    21300042: laser6
+    21300044: sprites1_22
+    21300046: laser7
+    21300048: laser8
+    21300050: laser9
+    21300052: laser3
+    21300054: boom9
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: InfinitySprite1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 3020
+        width: 1661
+        height: 979
+      alignment: 9
+      pivot: {x: 0.5033536, y: 0.30820498}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba799842540ae545a8c1f723befd4ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyberEnemy
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 3317
+        width: 687
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b1a9fcd6a5aaf4894cbcfbd8b041ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShip
+      rect:
+        serializedVersion: 2
+        x: 3162
+        y: 2940
+        width: 615
+        height: 1056
+      alignment: 9
+      pivot: {x: 0.4999988, y: 0.3583582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee715bc161435bd458d1e4830c65fd55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InfinitySprite2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2172
+        width: 1695
+        height: 862
+      alignment: 9
+      pivot: {x: 0.5106639, y: 0.340922}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd40ee51f7876c4a8b55c3934e1a776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom1
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 2676
+        width: 175
+        height: 195
+      alignment: 9
+      pivot: {x: 0.46149763, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54999f01fa1949c478f567fe56d8f2f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom2
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 2683
+        width: 221
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5, y: 0.46614173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccce29e40306f714dafdb5d691e96ea2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom3
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 2666
+        width: 214
+        height: 218
+      alignment: 9
+      pivot: {x: 0.46851498, y: 0.48454633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312f87257cd1243488b2a778506d989a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom4
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 2645
+        width: 232
+        height: 243
+      alignment: 9
+      pivot: {x: 0.46991915, y: 0.50201744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5c32ba9ac6b244eafb6e3f949e6ca1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InfinitySprite3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1328
+        width: 1681
+        height: 811
+      alignment: 9
+      pivot: {x: 0.5163143, y: 0.38821083}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2452bd9abcace4446adf92bad2c3e2e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom5
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 2140
+        width: 285
+        height: 313
+      alignment: 9
+      pivot: {x: 0.4881793, y: 0.48923674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c39fc3f3edd2840960df3f0063197d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom6
+      rect:
+        serializedVersion: 2
+        x: 2162
+        y: 2151
+        width: 276
+        height: 293
+      alignment: 9
+      pivot: {x: 0.46338066, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5496c5b2d236c49b47bb11c4d8db00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom7
+      rect:
+        serializedVersion: 2
+        x: 2633
+        y: 2185
+        width: 286
+        height: 271
+      alignment: 9
+      pivot: {x: 0.49924538, y: 0.48389933}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c59c4c9d663914b845761f2ebae9fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom8
+      rect:
+        serializedVersion: 2
+        x: 3098
+        y: 2154
+        width: 320
+        height: 302
+      alignment: 9
+      pivot: {x: 0.4849945, y: 0.47158995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03577d7ae871224184e96ba4bc62dfe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom10
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1740
+        width: 205
+        height: 209
+      alignment: 9
+      pivot: {x: 0.5212819, y: 0.45824903}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62699f88080d69f4483497c9c79f27cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom11
+      rect:
+        serializedVersion: 2
+        x: 2656
+        y: 1692
+        width: 237
+        height: 270
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071f7b947376ce44ba92eaf38ee6efa9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom12
+      rect:
+        serializedVersion: 2
+        x: 3131
+        y: 1689
+        width: 243
+        height: 276
+      alignment: 9
+      pivot: {x: 0.51988995, y: 0.53502446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11846c2be812a67459d2cfc63f20ec3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InfinitySprite4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 487
+        width: 1683
+        height: 763
+      alignment: 9
+      pivot: {x: 0.51780367, y: 0.3975454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e983cb7b75e4294696cd2c52eb3e0bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser1
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 1013
+        width: 249
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8958d214966913842813c8da744a3ed6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser2
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 1110
+        width: 151
+        height: 349
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0854f2b4ad64b8c48acf62370a57aee0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser5
+      rect:
+        serializedVersion: 2
+        x: 2678
+        y: 1240
+        width: 230
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45369b223e32e2949917c10f9bf68624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser4
+      rect:
+        serializedVersion: 2
+        x: 2679
+        y: 751
+        width: 158
+        height: 447
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c4dfb94666ae744adbe15974f2f9f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser6
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 930
+        width: 115
+        height: 460
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7dfce92ac36c2545807958146e2749b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprites1_22
+      rect:
+        serializedVersion: 2
+        x: 3156
+        y: 881
+        width: 844
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabbc55e4d938c04392580009b4235ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser7
+      rect:
+        serializedVersion: 2
+        x: 2075
+        y: 526
+        width: 145
+        height: 334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40c14242c85445409ee53b629b74a2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser8
+      rect:
+        serializedVersion: 2
+        x: 2708
+        y: 323
+        width: 76
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83d1acabfe9d834da57b0bcc5f136c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser9
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 327
+        width: 52
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f202f82b5533c48b8e49831a7b02c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser3
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 739
+        width: 221
+        height: 684
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adaa3774d87f3a418c54bbeb804f358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boom9
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1665
+        width: 271
+        height: 293
+      alignment: 9
+      pivot: {x: 0.4839007, y: 0.5595603}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a80ab8e9fed5745af5d8f0c0365910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8c5b3ab5fd7ab7644ad532e527e671d0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
