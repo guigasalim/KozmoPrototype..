@@ -14,12 +14,16 @@ public class BossController : MonoBehaviour
     public float shotStartWait;
     public float shotWaveWait;
     public GameObject explosion;
+    public GameObject player;
     public Image hpBarBackground;
     public Image hpBarForeground;
-    private float bossHP;
-    private float bossMaxHP;
+    private bool rage;
     private float time = 0.0f;
     public float period = 10f;
+    private Vector3 playerPosition;
+    private Vector3 dis;
+    private float angle;
+    public GameController gameController;
 
     // Start is called before the first frame update
     IEnumerator shotWaves()
@@ -31,8 +35,11 @@ public class BossController : MonoBehaviour
             {
                 Vector3 shotPosition = new Vector3(shotValues.x, shotValues.y, shotValues.z);
                 Quaternion shotRotation = Quaternion.identity;
+                dis = shotPosition - playerPosition;
+                var angle = Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg;
 
-                Instantiate(shot, shotPosition, Quaternion.Euler(0.0f, 0.0f, Random.Range(225.0f, 135.0f)));
+
+                Instantiate(shot, shotPosition, Quaternion.Euler(0.0f, 0.0f, Random.Range(angle + 75,angle + 105)));
                 yield return new WaitForSeconds(shotSpawnWait);
             }
             yield return new WaitForSeconds(shotWaveWait);
@@ -40,36 +47,38 @@ public class BossController : MonoBehaviour
 
     }
     // Start is called before the first frame update
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Shot")
-        {   
-            Debug.Log("Shoted! HP: " + bossHP);
-            bossHP -= 1;
-            Destroy(other.gameObject);
-            hpBarForeground.fillAmount = bossHP / bossMaxHP;
 
-        }
-        if (bossHP == 0)
-        {
-            Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(gameObject);
-        }
-    }
     void Start()
     {
-        bossMaxHP = 180.0f;
-        bossHP = 180.0f;
-        
+        GameObject gameControllerObject = GameObject.FindWithTag("GameController");
+        if (gameControllerObject != null)
+        {
+            gameController = gameControllerObject.GetComponent<GameController>();
+        }
+        if (gameController == null)
+        {
+            Debug.Log("Cannot find 'GameController' script");
+        }
+        shotCount = Mathf.RoundToInt(shotCount * gameController.rageSpeed);
+        shotSpawnWait = shotSpawnWait / gameController.rageSpeed;
+        shotStartWait = shotStartWait / gameController.rageSpeed;
+        shotWaveWait = shotWaveWait / gameController.rageSpeed;
+        rage = false;
         StartCoroutine(shotWaves());
-
+        playerPosition = player.transform.position;
+       
+        
     }
     // Update is called once per frame
     void Update()
-
+        
     {
+        if (player != null)  
+        playerPosition = player.transform.position;
+        
+
         explosions = new Vector3(Random.Range(-4f, 4f), Random.Range(1.2f, 5.5f), 0.0f);
-        if (bossHP/bossMaxHP <= 0.5)
+        if (gameController.bossHP / gameController.bossMaxHP <= 0.5)
         {
             if (Time.time > time)
             {
@@ -78,19 +87,25 @@ public class BossController : MonoBehaviour
             }
 
         }
-            hpBarForeground.fillAmount = bossHP / bossMaxHP;
-        AddjustCurrentHealth(0);
+        if ((gameController.bossHP / gameController.bossMaxHP <= 0.49)&& (gameController.bossHP / gameController.bossMaxHP >= 0.31)) {
+            if (!rage)
+            {
+                
+                shotCount = Mathf.RoundToInt(shotCount * (gameController.rageSpeed/3));
+                shotSpawnWait = shotSpawnWait / (gameController.rageSpeed/3);
+                shotStartWait = shotStartWait / (gameController.rageSpeed/3);
+                shotWaveWait = shotWaveWait / (gameController.rageSpeed/3);
+                rage = true;
 
+            }
+
+
+
+        }
+       
 
     }
 
-    private void AddjustCurrentHealth(int adj)
-    {
-        bossHP += adj;
-        if (bossHP < 0)
-            bossHP = 0;
-
-        if (bossHP > bossMaxHP)
-            bossHP = bossMaxHP;
-    }
 }
+
+

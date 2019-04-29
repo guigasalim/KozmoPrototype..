@@ -164,9 +164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e464dd219398cc847a41b3ef04c0cae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 2
   explosion: {fileID: 6009744944425789581, guid: 2b4b827eb72c9b346932c376d8171ceb,
     type: 3}
+  gameController: {fileID: 0}
 --- !u!114 &7480868502962301367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,5 +192,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d85f716e63017418ee4490a19b0312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 7780588474794945884}
   speed: -10

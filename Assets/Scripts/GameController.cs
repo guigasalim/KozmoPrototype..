@@ -7,17 +7,27 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public GameObject cyberEnemy;
+    public GameObject boss;
+    public Image hpBarBackground;
+    public Image hpBarForeground;
     public Vector3 spawnValues;
     public int hazardCount;
     public float spawnWait;
     public float startWait;
     public float waveWait;
-    private bool gameOver;
-    private bool restart;
-    public Text restartText;
-    public Text gameOverText;
-    private Scene scene;
 
+
+    private Scene scene;
+    public float shipHP;
+    public float bossHP;
+    public float bossDamage;
+    public float spawnsHP;
+    public float spawnsDamage;
+    public GameObject explosion;
+    public float bossMaxHP;
+    private bool rage;
+    public float rageSpeed;
+    public float difficult;
 
 
     IEnumerator spawnWaves()
@@ -34,48 +44,68 @@ public class GameController : MonoBehaviour
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
-            if (gameOver)
-            {
-                restartText.text = "Press any key for Restart";
-                restart = true;
-                break;
-            }
+
         }
-        
+
 
     }
     // Start is called before the first frame update
     void Start()
     {
-        gameOver = false;
-        restart = false;
-       
-        restartText.text = "";
-        gameOverText.text = "";
-        StartCoroutine(spawnWaves());
+        rageSpeed = 1 * difficult;
+        hazardCount = Mathf.RoundToInt(hazardCount * rageSpeed);
+        spawnWait = spawnWait / rageSpeed;
+        startWait = startWait /rageSpeed;
+        waveWait = waveWait / rageSpeed;
+        rage = false;
+
+    StartCoroutine(spawnWaves());
         scene = SceneManager.GetActiveScene();
+        bossMaxHP = bossHP;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (restart)
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                SceneManager.LoadScene(scene.name);
-            }
-        }
+        hpBarForeground.fillAmount = bossHP / bossMaxHP;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
+        AddjustCurrentHealth(0);
+        if ((bossHP / bossMaxHP <= 0.5))
+        {
+            if (!rage)
+            {
+                rageSpeed = 4f;
+                hazardCount = Mathf.RoundToInt(hazardCount * rageSpeed);
+                spawnWait = spawnWait / rageSpeed;
+                startWait = startWait / rageSpeed;
+                waveWait = waveWait / rageSpeed;
+                rage = true;
+            }
+        }
+       
+
+
     }
 
-    public void GameOver()
+    public void death(GameObject g)
     {
-        gameOverText.text = "Game Over!";
-        gameOver = true;
+        Instantiate(explosion, g.transform.position, g.transform.rotation);
+        Destroy(g);
+
+    }
+    private void AddjustCurrentHealth(int adj)
+    {
+        bossHP += adj;
+        
+        if (bossHP < 0)
+            bossHP = 0;
+
+        if (bossHP > bossMaxHP)
+            bossHP = bossMaxHP;
     }
 }
+    

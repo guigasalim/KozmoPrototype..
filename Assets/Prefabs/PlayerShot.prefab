@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 4068156365093754717}
   - component: {fileID: 5000428268943978235}
   - component: {fileID: 8693105112782749692}
+  - component: {fileID: 5853888028696846464}
   m_Layer: 0
   m_Name: PlayerShot
   m_TagString: Shot
@@ -164,3 +165,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4068156365093754717}
   speed: 30
+--- !u!114 &5853888028696846464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8354324373608229465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9f2dc956675ca4794e5b1154d41841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 6009744944425789581, guid: 2b4b827eb72c9b346932c376d8171ceb,
+    type: 3}
+  gameController: {fileID: 0}
