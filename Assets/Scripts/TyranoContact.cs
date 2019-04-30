@@ -60,9 +60,10 @@ public class TyranoContact : MonoBehaviour
         if ((other.tag == "Shot"))
         {
             spawnHP -= 1;
-
-            if (spawnHP <= 0) gameController.death(gameObject);
             Destroy(other.gameObject);
+            if (spawnHP <= 0) gameController.death(gameObject);
+            gameController.death(gameObject);
+            Destroy(gameObject);
 
         }
         

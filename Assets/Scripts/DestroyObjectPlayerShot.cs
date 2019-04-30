@@ -44,7 +44,7 @@ public class DestroyObjectPlayerShot : MonoBehaviour
         if (other.tag == "Boss")
         {
             gameController.hitBoss = true;
-            Debug.Log("Boss HP: " + gameController.bossHP);
+            
 
 
             

@@ -17,13 +17,13 @@ public class MenuControler : MonoBehaviour
        
         for(int i =1; i < numberPlanets; i++)
         {
-            Debug.Log(planets[i].name);
+            
             planets[i].SetActive(false);
         }
 
         for (int j = 1 ; j <= (levelpassed -1); j++)
         {
-            Debug.Log(planets[j].name);
+            
             planets[j].SetActive(true);
         }
         PlayerPrefs.SetInt("NumberPlanets", numberPlanets);

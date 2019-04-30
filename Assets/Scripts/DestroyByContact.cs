@@ -69,8 +69,10 @@ public class DestroyByContact : MonoBehaviour
             
 
             spawnHP -= 1;
-
+            Destroy(other.gameObject);
             if (spawnHP <= 0) gameController.death(gameObject);
+            gameController.death(gameObject);
+            Destroy(gameObject);
 
         }
         

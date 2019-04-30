@@ -230,10 +230,10 @@ MonoBehaviour:
   EnableL: 0
   EnableS: 0
   shipHP: 15
-  bossHP: 250
+  bossHP: 200
   bossDamage: 0
-  spawnsHP: 2
-  spawnsDamage: 2
+  spawnsHP: 1
+  spawnsDamage: 1
   explosion: {fileID: 6009744944425789581, guid: 2b4b827eb72c9b346932c376d8171ceb,
     type: 3}
   bossMaxHP: 0
