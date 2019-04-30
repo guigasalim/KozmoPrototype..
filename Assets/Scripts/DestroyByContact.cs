@@ -39,7 +39,7 @@ public class DestroyByContact : MonoBehaviour
             return;
 
         }
-        if ((other.tag == "Boss")|| (other.tag == "Hazard") || (other.tag == "EnemyShot")) return;
+        if ((other.tag == "Boss")|| (other.tag == "Hazard") || (other.tag == "EnemyShot") || (other.tag == "Field")) return;
         if (other.tag == "Player")
         {
             Debug.Log("Shots on: " + other.tag);
@@ -58,7 +58,8 @@ public class DestroyByContact : MonoBehaviour
                 SceneManager.LoadScene("GameOver");
 
             }
-
+            gameController.death(gameObject);
+            Destroy(gameObject);
 
 
         }
@@ -72,8 +73,7 @@ public class DestroyByContact : MonoBehaviour
             if (spawnHP <= 0) gameController.death(gameObject);
 
         }
-        gameController.death(gameObject);
-        Destroy(gameObject);
+        
 
     }
 

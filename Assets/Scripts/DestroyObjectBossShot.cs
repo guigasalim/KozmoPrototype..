@@ -36,7 +36,7 @@ public class DestroyObjectBossShot : MonoBehaviour
             return;
 
         }
-        if ((other.tag == "Hazard")|| (other.tag == "Boss") || (other.tag == "Shot") || (other.tag == "EnemyShot")) return;
+        if ((other.tag == "Hazard")|| (other.tag == "Boss") || (other.tag == "Field") || (other.tag == "Shot") || (other.tag == "EnemyShot")) return;
         if (other.tag == "Player")
         {
             gameController.hitPlayer = true;
@@ -55,10 +55,10 @@ public class DestroyObjectBossShot : MonoBehaviour
                 InvokeRepeating("gameover", 10f,10f);
                 SceneManager.LoadScene("GameOver");
             }
-
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+        
 
     }
 

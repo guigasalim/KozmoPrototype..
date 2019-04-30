@@ -40,7 +40,7 @@ public class DestroyObjectPlayerShot : MonoBehaviour
             return;
             
         }
-        if ((other.tag == "Player")|| (other.tag == "Shot") || (other.tag == "EnemyShot")) return;
+        if ((other.tag == "Player")|| (other.tag == "Shot") || (other.tag == "EnemyShot") || (other.tag == "Field")) return;
         if (other.tag == "Boss")
         {
             gameController.hitBoss = true;
@@ -58,10 +58,10 @@ public class DestroyObjectPlayerShot : MonoBehaviour
 
                 LevelControlScript.instance.youWin ();
             }
-
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+        
         
     }
 

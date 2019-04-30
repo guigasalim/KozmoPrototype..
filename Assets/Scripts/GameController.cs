@@ -135,7 +135,7 @@ public class GameController : MonoBehaviour
     {
         while (true)
         {
-            if (hitPlayer)
+            if ((hitPlayer)&& (playerRenderer!=null))
             {
                 tmpPlayer = playerRenderer.material.color;
                 tmpPlayer.a = 0f;
@@ -143,12 +143,12 @@ public class GameController : MonoBehaviour
                 yield return new WaitForSeconds(.05f);
 
                 playerRenderer.material.color = playerOriginalColor;
-                Debug.Log("funcionou :" + playerRenderer.material.color);
+               
                 yield return new WaitForSeconds(.05f);
                 hitPlayer = false;
 
             }
-            if (hitBoss)
+            if ((hitBoss)&&(bossRenderer != null))
             {
                 if ((bossHP / bossMaxHP >= 0.5))
                 {
@@ -159,7 +159,7 @@ public class GameController : MonoBehaviour
 
 
                     bossRenderer.material.color = bossOriginalColor;
-                    Debug.Log("funcionou :" + bossRenderer.material.color);
+                    
                     yield return new WaitForSeconds(.05f);
 
                 }
@@ -168,7 +168,7 @@ public class GameController : MonoBehaviour
                 {
                     bossRenderer.material.color = Color.red;
                     yield return new WaitForSeconds(.05f);
-                    Debug.Log("funcionou :" + bossRenderer.material.color);
+                    
                     bossRenderer.material.color = bossOriginalColor;
                     yield return new WaitForSeconds(.05f);
 

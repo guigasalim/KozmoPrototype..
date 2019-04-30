@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\DestroyObjectBossShot.cs" />
     <Compile Include="Assets\Scripts\DestroyObjectPlayerShot.cs" />
     <Compile Include="Assets\Scripts\Earthquake.cs" />
+    <Compile Include="Assets\Scripts\Fire.cs" />
     <Compile Include="Assets\Scripts\FixRotate.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GameControllerLW.cs" />
@@ -86,6 +87,8 @@
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\SelectPlanet.cs" />
     <Compile Include="Assets\Scripts\ShiningItem.cs" />
+    <Compile Include="Assets\Scripts\TGHazardControlScript.cs" />
+    <Compile Include="Assets\Scripts\TGMover.cs" />
     <Compile Include="Assets\Scripts\TyranoContact.cs" />
     <Compile Include="Assets\Scripts\VictoryScript.cs" />
     <None Include="Assets\Shining Coins\Shining Items.shader" />

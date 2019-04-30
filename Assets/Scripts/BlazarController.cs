@@ -25,6 +25,8 @@ public class BlazarController : MonoBehaviour
     private Vector3 playerPosition;
     private Vector3 dis;
     private float angle;
+    private float direction;
+    
     public GameController gameController;
     // Start is called before the first frame update
     IEnumerator shotWaves()
@@ -36,15 +38,40 @@ public class BlazarController : MonoBehaviour
 
             for (int i = 0; i < shotCount; i++)
             {
+                Debug.Log(switchhands);
+                if (!switchhands) {
 
-                Vector3 shotPosition = new Vector3(shotValues.x, shotValues.y, shotValues.z);
-                Quaternion shotRotation = Quaternion.identity;
-                dis = shotPosition - playerPosition;
-                var angle = Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg;
+                    Vector3 shotPosition = new Vector3(-shotValues.x, Random.Range(-shotValues.y, shotValues.y), shotValues.z);
+                    
+                   
+                    Quaternion shotRotation = Quaternion.identity;
+                    dis = shotPosition - playerPosition;
+                    var angle = Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg;
 
 
-                Instantiate(shot, shotPosition, Quaternion.Euler(0.0f, 0.0f, angle + 90));
-                yield return new WaitForSeconds(shotSpawnWait);
+                    Instantiate(shot, shotPosition, Quaternion.Euler(0.0f, 0.0f, (angle + 90)));
+                    switchhands = (Random.value > 0.5f);
+                    yield return new WaitForSeconds(shotSpawnWait);
+
+
+                }
+
+                if (switchhands)
+                {
+                    Vector3 shotPosition = new Vector3(shotValues.x, Random.Range(-shotValues.y, shotValues.y), shotValues.z);
+                    
+              
+                    Quaternion shotRotation = Quaternion.identity;
+                    dis = shotPosition - playerPosition;
+                    var angle = Mathf.Atan2(dis.y, dis.x) * Mathf.Rad2Deg;
+
+
+                    Instantiate(shot, shotPosition, Quaternion.Euler(0.0f, 0.0f, (angle + 90)));
+                    switchhands = (Random.value > 0.5f);
+                    yield return new WaitForSeconds(shotSpawnWait);
+
+                }
+                
             }
             yield return new WaitForSeconds(shotWaveWait);
             switchhands = (Random.value > 0.5f);
@@ -71,6 +98,7 @@ public class BlazarController : MonoBehaviour
         shotStartWait = shotStartWait / gameController.rageSpeed;
         shotWaveWait = shotWaveWait / gameController.rageSpeed;
         rage = false;
+        switchhands = (Random.value > 0.5f);
         StartCoroutine(shotWaves());
         playerPosition = player.transform.position;
 
