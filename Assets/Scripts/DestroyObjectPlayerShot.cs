@@ -7,11 +7,13 @@ public class DestroyObjectPlayerShot : MonoBehaviour
 {
     public GameObject explosion;
     public GameController gameController;
- 
+    private bool flash;
+  
     
     // Start is called before the first frame update
     void Start()
     {
+        
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
         if (gameControllerObject != null)
         {
@@ -23,7 +25,7 @@ public class DestroyObjectPlayerShot : MonoBehaviour
         }
         
     }
-
+  
     // Update is called once per frame
     void Update()
     {
@@ -31,6 +33,7 @@ public class DestroyObjectPlayerShot : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+
         
         if (other.tag == "Boundary")
         {
@@ -40,15 +43,20 @@ public class DestroyObjectPlayerShot : MonoBehaviour
         if ((other.tag == "Player")|| (other.tag == "Shot") || (other.tag == "EnemyShot")) return;
         if (other.tag == "Boss")
         {
-            
+            gameController.hitBoss = true;
             Debug.Log("Boss HP: " + gameController.bossHP);
+
+
+            
+
             gameController.bossHP -= 1;
             gameController.hpBarForeground.fillAmount = gameController.bossHP / gameController.bossMaxHP;
 
             if (gameController.bossHP <= 0)
             {
                 gameController.death(other.gameObject);
-                SceneManager.LoadScene("GameOver");
+
+                LevelControlScript.instance.youWin ();
             }
 
         }

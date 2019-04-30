@@ -11,7 +11,7 @@ public class MenuScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class MenuScript : MonoBehaviour
         }
 
         if (Input.anyKey)
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("MainMenu2");
       
     }
 

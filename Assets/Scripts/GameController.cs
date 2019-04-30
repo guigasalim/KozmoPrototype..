@@ -8,6 +8,21 @@ public class GameController : MonoBehaviour
 {
     public GameObject cyberEnemy;
     public GameObject boss;
+    public SpriteRenderer bossRenderer;
+    public SpriteRenderer playerRenderer;
+    
+    public Color bossOriginalColor;
+    public Color playerOriginalColor;
+    
+    private Color tmpBoss;
+    private Color tmpPlayer;
+    
+    public bool hitPlayer = false;
+    public bool hitBoss = false;
+ 
+
+    
+    
     public Image hpBarBackground;
     public Image hpBarForeground;
     public Vector3 spawnValues;
@@ -16,7 +31,8 @@ public class GameController : MonoBehaviour
     public float startWait;
     public float waveWait;
 
-
+    public bool EnableL;
+    public bool EnableS;
     private Scene scene;
     public float shipHP;
     public float bossHP;
@@ -52,14 +68,18 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+     bossOriginalColor= bossRenderer.material.color;
+     playerOriginalColor =  playerRenderer.material.color;
+     
         rageSpeed = 1 * difficult;
         hazardCount = Mathf.RoundToInt(hazardCount * rageSpeed);
         spawnWait = spawnWait / rageSpeed;
-        startWait = startWait /rageSpeed;
+        startWait = startWait / rageSpeed;
         waveWait = waveWait / rageSpeed;
         rage = false;
 
-    StartCoroutine(spawnWaves());
+        StartCoroutine(spawnWaves());
+        StartCoroutine(flasher());
         scene = SceneManager.GetActiveScene();
         bossMaxHP = bossHP;
 
@@ -86,7 +106,7 @@ public class GameController : MonoBehaviour
                 rage = true;
             }
         }
-       
+
 
 
     }
@@ -100,12 +120,71 @@ public class GameController : MonoBehaviour
     private void AddjustCurrentHealth(int adj)
     {
         bossHP += adj;
-        
+
         if (bossHP < 0)
             bossHP = 0;
 
         if (bossHP > bossMaxHP)
             bossHP = bossMaxHP;
+
+
+
+   
     }
+    IEnumerator flasher()
+    {
+        while (true)
+        {
+            if (hitPlayer)
+            {
+                tmpPlayer = playerRenderer.material.color;
+                tmpPlayer.a = 0f;
+                playerRenderer.material.color = tmpPlayer;
+                yield return new WaitForSeconds(.05f);
+
+                playerRenderer.material.color = playerOriginalColor;
+                Debug.Log("funcionou :" + playerRenderer.material.color);
+                yield return new WaitForSeconds(.05f);
+                hitPlayer = false;
+
+            }
+            if (hitBoss)
+            {
+                if ((bossHP / bossMaxHP >= 0.5))
+                {
+                    bossRenderer.material.color = Color.blue;
+                   
+                    
+                    yield return new WaitForSeconds(.05f);
+
+
+                    bossRenderer.material.color = bossOriginalColor;
+                    Debug.Log("funcionou :" + bossRenderer.material.color);
+                    yield return new WaitForSeconds(.05f);
+
+                }
+
+                if ((bossHP / bossMaxHP <= 0.5))
+                {
+                    bossRenderer.material.color = Color.red;
+                    yield return new WaitForSeconds(.05f);
+                    Debug.Log("funcionou :" + bossRenderer.material.color);
+                    bossRenderer.material.color = bossOriginalColor;
+                    yield return new WaitForSeconds(.05f);
+
+                }
+                hitBoss = false;
+
+            }
+
+            yield return new WaitForSeconds(.05f);
+
+        }
+
+
+
+
+    }
+
 }
     

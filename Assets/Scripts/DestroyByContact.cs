@@ -10,6 +10,7 @@ public class DestroyByContact : MonoBehaviour
     public GameController gameController;
     private float spawnHP;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +33,7 @@ public class DestroyByContact : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-
+        
         if (other.tag == "Boundary")
         {
             return;
@@ -43,7 +44,10 @@ public class DestroyByContact : MonoBehaviour
         {
             Debug.Log("Shots on: " + other.tag);
             Debug.Log("Ship HP: " + gameController.shipHP);
-           
+
+            gameController.hitPlayer = true;
+
+
             gameController.shipHP -= gameController.spawnsDamage;
             
 
@@ -60,6 +64,9 @@ public class DestroyByContact : MonoBehaviour
         }
         if ((other.tag == "Shot"))
         {
+
+            
+
             spawnHP -= 1;
 
             if (spawnHP <= 0) gameController.death(gameObject);
@@ -69,4 +76,6 @@ public class DestroyByContact : MonoBehaviour
         Destroy(gameObject);
 
     }
+
+   
 }

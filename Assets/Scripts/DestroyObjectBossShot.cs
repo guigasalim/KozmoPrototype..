@@ -30,7 +30,7 @@ public class DestroyObjectBossShot : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-    
+        
         if (other.tag == "Boundary")
         {
             return;
@@ -39,7 +39,10 @@ public class DestroyObjectBossShot : MonoBehaviour
         if ((other.tag == "Hazard")|| (other.tag == "Boss") || (other.tag == "Shot") || (other.tag == "EnemyShot")) return;
         if (other.tag == "Player")
         {
-
+            gameController.hitPlayer = true;
+            
+            
+            
             gameController.shipHP -= gameController.bossDamage;
            
 
@@ -67,4 +70,6 @@ public class DestroyObjectBossShot : MonoBehaviour
             win = false;
         }
     }
+
+   
 }
